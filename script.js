@@ -1,24 +1,37 @@
-document.getElementById("pedidoForm").addEventListener("submit", function(e) {
+document.getElementById("pedidoForm").addEventListener("submit", function (e) {
     e.preventDefault();
 
-    const nombre = document.getElementById("nombre").value;
-    const telefono = document.getElementById("telefono").value;
-    const tamal = document.getElementById("tamal").value;
-    const atole = document.getElementById("atole").value;
-    const pan = document.getElementById("pan").value;
+    const nombre = document.getElementById("nombre").value.trim();
+    const telefono = document.getElementById("telefono").value.trim();
+    const pedidoSeleccionado = document.querySelector('input[name="pedido"]:checked');
 
+    const resultado = document.getElementById("resultado");
+
+    if (!nombre || !telefono) {
+        resultado.innerHTML = "❌ Por favor completa tu nombre y teléfono.";
+        return;
+    }
+
+    if (!pedidoSeleccionado) {
+        resultado.innerHTML = "❌ Por favor selecciona un platillo.";
+        return;
+    }
+
+    const pedido = pedidoSeleccionado.value;
+
+    // Mensaje que se enviará por WhatsApp
     const mensaje = `
-Pedido Iglesia
+Pedido Don Bosco
 Nombre: ${nombre}
 Teléfono: ${telefono}
-
-Tamal: ${tamal}
-Atole: ${atole}
-Pan: ${pan}
+Platillo: ${pedido}
     `;
 
-    const numeroIglesia = "5216864151018"; // REEMPLAZA con el número real
-    const url = `https://wa.me/${numeroIglesia}?text=${encodeURIComponent(mensaje)}`;
+    const numeroDestino = "526864151018"; // 52 + tu número
+    const urlWhatsApp = `https://wa.me/${numeroDestino}?text=${encodeURIComponent(mensaje)}`;
 
-    window.open(url, "_blank");
+    // Abrir WhatsApp
+    window.open(urlWhatsApp, "_blank");
+
+    resultado.innerHTML = "✅ Redirigiendo a WhatsApp para enviar tu pedido...";
 });
