@@ -1,31 +1,53 @@
-<section id="menu">
-  <h2>🍽️ Menú Don Bosco</h2>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedidos - Don Bosco</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
-  <form id="pedidoForm">
-    <div class="opcion">
-      <label>
-        <input type="radio" name="pedido" value="Power Bowl de Pollo">
-        <strong>🥗 Power Bowl de Pollo (Estilo Mexicano)</strong><br>
-        Pechuga de pollo con arroz, frijoles y elote. Incluye aguacate o queso.
-      </label>
+<h1>Pedidos Don Bosco</h1>
+
+<form id="pedidoForm">
+    <label>Nombre:</label>
+    <input type="text" id="nombre" required>
+
+    <label>Teléfono:</label>
+    <input type="tel" id="telefono" required>
+
+    <h3>Menú</h3>
+
+    <div class="producto">
+        <label>
+            <input type="radio" name="pedido" value="Power Bowl de Pollo">
+            <strong>🥗 Power Bowl de Pollo</strong><br>
+            Arroz, pollo, frijoles y elote.
+        </label>
     </div>
 
-    <div class="opcion">
-      <label>
-        <input type="radio" name="pedido" value="Pasta Alfredo Saludable">
-        <strong>🍝 Pasta Alfredo Saludable</strong><br>
-        Pasta con salsa ligera, atún o pavo y vegetales.
-      </label>
+    <div class="producto">
+        <label>
+            <input type="radio" name="pedido" value="Pasta Alfredo Saludable">
+            <strong>🍝 Pasta Alfredo Saludable</strong><br>
+            Pasta cremosa ligera con atún o pavo.
+        </label>
     </div>
 
-    <div class="opcion">
-      <label>
-        <input type="radio" name="pedido" value="Quesadillas Full Equipo">
-        <strong>🧀 Quesadillas Full Equipo</strong><br>
-        Quesadillas con carne, queso fundido y vegetales, con zanahoria.
-      </label>
+    <div class="producto">
+        <label>
+            <input type="radio" name="pedido" value="Quesadillas Full Equipo">
+            <strong>🧀 Quesadillas Full Equipo</strong><br>
+            Queso fundido con carne y vegetales.
+        </label>
     </div>
 
-    <button type="submit">📩 Hacer pedido</button>
-  </form>
-</section>
+    <button type="submit">Enviar pedido</button>
+</form>
+
+<div id="resultado"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
