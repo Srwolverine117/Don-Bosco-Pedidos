@@ -1,27 +1,31 @@
 <section id="menu">
   <h2>🍽️ Menú Don Bosco</h2>
 
-  <div class="opcion">
-    <h3>🥗 Power Bowl de Pollo (Estilo Mexicano)</h3>
-    <p>
-      Pechuga de pollo sazonada con arroz, frijoles y elote,
-      acompañado con aguacate o queso.
-    </p>
-  </div>
+  <form id="pedidoForm">
+    <div class="opcion">
+      <label>
+        <input type="radio" name="pedido" value="Power Bowl de Pollo">
+        <strong>🥗 Power Bowl de Pollo (Estilo Mexicano)</strong><br>
+        Pechuga de pollo con arroz, frijoles y elote. Incluye aguacate o queso.
+      </label>
+    </div>
 
-  <div class="opcion">
-    <h3>🍝 Pasta Alfredo Saludable</h3>
-    <p>
-      Pasta con salsa cremosa ligera, atún o pavo y vegetales
-      como brócoli o chícharos.
-    </p>
-  </div>
+    <div class="opcion">
+      <label>
+        <input type="radio" name="pedido" value="Pasta Alfredo Saludable">
+        <strong>🍝 Pasta Alfredo Saludable</strong><br>
+        Pasta con salsa ligera, atún o pavo y vegetales.
+      </label>
+    </div>
 
-  <div class="opcion">
-    <h3>🧀 Quesadillas Full Equipo</h3>
-    <p>
-      Quesadillas con carne, queso fundido y vegetales,
-      acompañadas de zanahoria.
-    </p>
-  </div>
+    <div class="opcion">
+      <label>
+        <input type="radio" name="pedido" value="Quesadillas Full Equipo">
+        <strong>🧀 Quesadillas Full Equipo</strong><br>
+        Quesadillas con carne, queso fundido y vegetales, con zanahoria.
+      </label>
+    </div>
+
+    <button type="submit">📩 Hacer pedido</button>
+  </form>
 </section>
