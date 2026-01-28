@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedidos Iglesia</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+
+
+<h1>Don Bosco</h1>
+
+<form id="pedidoForm">
+    <label>Nombre completo</label>
+    <input type="text" id="nombre" required>
+
+    <label>Teléfono</label>
+    <input type="tel" id="telefono" required>
+
+    <h3>Productos</h3>
+
+    <div class="producto">
+        <span>Tamal</span>
+        <input type="number" id="tamal" min="0" value="0">
+    </div>
+
+    <div class="producto">
+        <span>Atole</span>
+        <input type="number" id="atole" min="0" value="0">
+    </div>
+
+    <div class="producto">
+        <span>Pan</span>
+        <input type="number" id="pan" min="0" value="0">
+    </div>
+
+    <button type="submit">Enviar pedido por WhatsApp</button>
+</form>
+
+<script src="script.js"></script>
+    </div>
+</body>
+</html>
