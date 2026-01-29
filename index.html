@@ -1,53 +1,86 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pedidos - Don Bosco</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pedidos Don Bosco</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<h1>Pedidos Don Bosco</h1>
+  <!-- HEADER -->
+  <header class="top-bar">
+    <div class="logo">
+      <span class="logo-text">Don Bosco</span>
+    </div>
+  </header>
 
-<form id="pedidoForm">
-    <label>Nombre:</label>
-    <input type="text" id="nombre" required>
+  <!-- CONTENIDO -->
+  <main class="container">
 
-    <label>Teléfono:</label>
-    <input type="tel" id="telefono" required>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Pedidos Don Bosco</h1>
+        <p>
+          Servicio de pedidos para apoyar a nuestra comunidad.
+          Gracias por colaborar 🙏
+        </p>
+      </div>
+    </section>
 
-    <h3>Menú</h3>
+    <!-- TARJETA FORMULARIO -->
+    <section class="card">
 
-    <div class="producto">
-        <label>
+      <form id="pedidoForm">
+
+        <label>Nombre</label>
+        <input type="text" id="nombre" required>
+
+        <label>Teléfono</label>
+        <input type="tel" id="telefono" required>
+
+        <h3>Menú</h3>
+
+        <div class="producto">
+          <label>
             <input type="radio" name="pedido" value="Power Bowl de Pollo">
             <strong>🥗 Power Bowl de Pollo</strong><br>
             Arroz, pollo, frijoles y elote.
-        </label>
-    </div>
+          </label>
+        </div>
 
-    <div class="producto">
-        <label>
+        <div class="producto">
+          <label>
             <input type="radio" name="pedido" value="Pasta Alfredo Saludable">
             <strong>🍝 Pasta Alfredo Saludable</strong><br>
-            Pasta cremosa ligera con atún o pavo.
-        </label>
-    </div>
+            Pasta con salsa ligera, atún o pavo y vegetales.
+          </label>
+        </div>
 
-    <div class="producto">
-        <label>
+        <div class="producto">
+          <label>
             <input type="radio" name="pedido" value="Quesadillas Full Equipo">
             <strong>🧀 Quesadillas Full Equipo</strong><br>
             Queso fundido con carne y vegetales.
-        </label>
-    </div>
+          </label>
+        </div>
 
-    <button type="submit">Enviar pedido</button>
-</form>
+        <button type="submit">Enviar pedido</button>
 
-<div id="resultado"></div>
+      </form>
 
-<script src="script.js"></script>
+      <div id="resultado"></div>
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© Comunidad Don Bosco</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
