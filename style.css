@@ -1,4 +1,4 @@
-/* RESET BÁSICO */
+/* RESET */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,22 +6,33 @@
   font-family: "Segoe UI", sans-serif;
 }
 
+/* COLORES BASE */
+:root {
+  --azul: #0B5FA5;
+  --azul-hover: #094D86;
+  --gris-fondo: #F4F6F8;
+  --gris-suave: #f7f9fb;
+  --dorado: #C9A24D;
+  --texto: #333;
+}
+
+/* BODY */
 body {
-  background-color: #f4f6f8;
-  color: #333;
+  background-color: var(--gris-fondo);
+  color: var(--texto);
 }
 
 /* HEADER */
 .top-bar {
   background: #ffffff;
   padding: 20px 40px;
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 3px solid var(--azul);
 }
 
 .logo-text {
   font-size: 26px;
   font-weight: 600;
-  color: #0b5fa5;
+  color: var(--azul);
 }
 
 /* CONTENEDOR */
@@ -33,21 +44,19 @@ body {
 
 /* HERO */
 .hero {
-  display: flex;
-  align-items: center;
   margin-bottom: 40px;
 }
 
 .hero-text h1 {
   font-size: 42px;
   font-weight: 600;
-  color: #2c2c2c;
+  color: var(--azul);
   margin-bottom: 10px;
 }
 
 .hero-text p {
   font-size: 18px;
-  color: #666;
+  color: #555;
   max-width: 600px;
 }
 
@@ -55,48 +64,75 @@ body {
 .card {
   background: #ffffff;
   padding: 30px;
-  border-radius: 14px;
+  border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  border-top: 5px solid var(--dorado);
 }
 
 /* FORMULARIO */
 form label {
   display: block;
-  margin-top: 15px;
+  margin-top: 20px;
   font-weight: 500;
+  color: var(--azul);
 }
 
 input[type="text"],
 input[type="tel"] {
   width: 100%;
   padding: 12px;
-  margin-top: 6px;
+  margin-top: 8px;
   border-radius: 8px;
   border: 1px solid #ccc;
   font-size: 15px;
 }
 
+input:focus {
+  outline: none;
+  border-color: var(--azul);
+}
+
+/* MENÚ */
+h3 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: var(--azul);
+}
+
 .producto {
-  background: #f7f9fb;
+  background: var(--gris-suave);
   padding: 15px;
   border-radius: 10px;
   margin-top: 12px;
+  border-left: 5px solid var(--azul);
 }
 
+.producto strong {
+  color: var(--texto);
+}
+
+/* BOTÓN */
 button {
-  margin-top: 25px;
+  margin-top: 30px;
   width: 100%;
   padding: 14px;
-  background: #0b5fa5;
+  background: var(--azul);
   color: white;
   border: none;
   border-radius: 10px;
   font-size: 16px;
   cursor: pointer;
+  font-weight: 600;
 }
 
 button:hover {
-  background: #094d86;
+  background: var(--azul-hover);
+}
+
+/* RESULTADO */
+#resultado {
+  margin-top: 20px;
+  color: var(--azul);
 }
 
 /* FOOTER */
@@ -113,8 +149,4 @@ button:hover {
   .hero-text h1 {
     font-size: 32px;
   }
-}
-
-#telefono {
-  margin-top: 12px;
 }
